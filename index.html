@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Curso Diseño Gráfico</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="importmap">
+  {
+    "imports": {}
+  }
+  </script>
+</head>
+<body>
+  <div id="splash" aria-hidden="true" class="splash" style="display:none">
+    <div class="splash-card" role="img" aria-label="Splash: Curso de Diseño Gráfico">
+      <div class="splash-title">CURSO DE DISEÑO GRÁFICO</div>
+      <div class="splash-by">hecho por <strong>JUANDEV</strong></div>
+
+      <!-- loading spinner + status -->
+      <div class="splash-loader" aria-hidden="true">
+        <svg class="spinner" viewBox="0 0 50 50" width="36" height="36" aria-hidden="true">
+          <circle cx="25" cy="25" r="20" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="4"></circle>
+          <path class="spinner-seg" d="M25 5 a20 20 0 0 1 0 40" fill="none" stroke="white" stroke-width="4" stroke-linecap="round"></path>
+        </svg>
+        <div class="splash-loading-text">Cargando…</div>
+      </div>
+
+      <div class="splash-bar" aria-hidden="true"><span></span></div>
+
+      <!-- skip control -->
+      <div style="margin-top:8px;width:100%;display:flex;justify-content:center">
+        <button id="splashSkip" class="ghost" aria-label="Saltar intro" style="padding:8px 12px;border-radius:10px;min-width:110px">Saltar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="app" class="app">
+    <header class="topbar">
+      <button id="navBtn" class="icon-btn" aria-label="menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>
+      </button>
+      <div class="titlewrap">
+        <div class="title">Diseño Gráfico</div>
+        <div class="subtitle">Curso estilo Fluent — 12 lecciones</div>
+      </div>
+      <button id="themeToggle" class="icon-btn" aria-label="toggle theme">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path id="themeIcon" d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>
+      </button>
+    </header>
+
+    <main class="main">
+      <section class="card course-card">
+        <div class="course-hero">
+          <svg class="hero-graphic" viewBox="0 0 200 120" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#f7c59f"/><stop offset="1" stop-color="#ff8a65"/></linearGradient>
+            </defs>
+            <rect x="0" y="0" width="200" height="120" fill="url(#g1)" rx="10"/>
+            <g transform="translate(20,18)" fill="#fff" opacity="0.9">
+              <rect x="0" y="0" width="60" height="60" rx="6" opacity="0.12"/>
+              <rect x="70" y="0" width="90" height="18" rx="4"/>
+              <rect x="70" y="26" width="90" height="10" rx="3" opacity="0.9"/>
+              <circle cx="30" cy="85" r="12" opacity="0.15"/>
+            </g>
+          </svg>
+          <div class="course-info">
+            <div class="course-title">Fundamentos del Diseño Gráfico</div>
+            <div class="course-meta">Profesor: Juan Andrés • 8h • Nivel: Medio</div>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="30"><span style="width:30%"></span></div>
+              <div class="progress-text">30% completado</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button id="resumeBtn" class="primary">Reanudar</button>
+          <button id="catalogBtn" class="ghost">Ver Temario</button>
+        </div>
+      </section>
+
+      <section class="card lessons-card" id="lessonsCard">
+        <div class="section-header">
+          <div class="section-title">Lecciones</div>
+          <div class="section-sub">Toca una lección para ver detalles</div>
+        </div>
+        <div id="lessonsList" class="lessons-list" aria-live="polite">
+          <!-- lessons injected by app.js -->
+        </div>
+      </section>
+    </main>
+
+
+
+    <!-- Views: home / resources / profile -->
+    <div id="homeView">
+      <!-- course-card and lessons-card already in DOM; homeView wraps them for tab switching -->
+    </div>
+
+    <section id="resourcesView" class="card" style="display:none">
+      <div style="font-weight:700">Recursos</div>
+      <div style="color:var(--muted);margin-top:8px">Plantillas, iconos y enlaces recomendados.</div>
+    </section>
+
+    <section id="profileView" class="card" style="display:none">
+      <div style="font-weight:700">Perfil</div>
+      <div style="color:var(--muted);margin-top:8px">Progreso, certificados y ajustes.</div>
+    </section>
+
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
