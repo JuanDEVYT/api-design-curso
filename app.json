@@ -1,0 +1,61 @@
+{
+  "usuario": {
+    "id": 1,
+    "nombre": "Maricarmen Guerra"
+  },
+  
+  "progreso_curso": {
+    "total_lecciones": 6,
+    "lecciones_completadas": 0,
+    "lecciones": [
+      {
+        "id": 1,
+        "titulo": "Introducción al diseño",
+        "descripcion": "Conceptos básicos del diseño gráfico",
+        "duracion_minutos": 45,
+        "completada": false,
+        "fecha_completado": null
+      },
+      {
+        "id": 2,
+        "titulo": "Tipografía",
+        "descripcion": "Fundamentos de tipografía y selección de fuentes",
+        "duracion_minutos": 60,
+        "completada": false,
+        "fecha_completado": null
+      },
+      {
+        "id": 3,
+        "titulo": "Teoría del color",
+        "descripcion": "Psicología del color y paletas cromáticas",
+        "duracion_minutos": 50,
+        "completada": false,
+        "fecha_completado": null
+      },
+      {
+        "id": 4,
+        "titulo": "Composición y layout",
+        "descripcion": "Principios de composición y distribución visual",
+        "duracion_minutos": 55,
+        "completada": false,
+        "fecha_completado": null
+      },
+      {
+        "id": 5,
+        "titulo": "Herramientas digitales",
+        "descripcion": "Introducción a software de diseño",
+        "duracion_minutos": 70,
+        "completada": false,
+        "fecha_completado": null
+      },
+      {
+        "id": 6,
+        "titulo": "Proyecto final",
+        "descripcion": "Aplicación de conceptos en un diseño completo",
+        "duracion_minutos": 90,
+        "completada": false,
+        "fecha_completado": null
+      }
+    ]
+  }
+}
